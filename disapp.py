@@ -108,12 +108,12 @@ if page == "Credibility Checker":
     st.write("Option 1: Paste an article or text you want to analyze, and press 'Analyze article'.\n\nOption 2: Together with your article, add the news outlet/source and author of the article, do get a deeper analysis.\n\nOption 3: If you only want a quick check on an author or source, enter them below and press 'Check only source' or 'Check only author'.")
     
     left_column, right_column = st.columns([1,2])
-    st.set_option('deprecation.showPyplotGlobalUse', False)     ## gör denna nåt?
+    #st.set_option('deprecation.showPyplotGlobalUse', False)     ## gör denna nåt?
     with left_column:
         st.image("textanalys.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     
     with right_column:
-        artikel_input = st.text_input("Paste your article here:", help("help me please"))
+        artikel_input = st.text_input("Paste your article here:", help="help me please")
 
         col1, col2 = st.columns(2)
         source_input = col1.text_input("For deeper analysis, paste the news outlet or source here (optional):")
